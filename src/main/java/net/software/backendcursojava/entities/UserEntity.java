@@ -20,7 +20,7 @@ public class UserEntity implements Serializable {
     private String userId;
 
     @Column(nullable = false, length = 50)
-    private String firsname;
+    private String firstname;
 
     @Column(nullable = false, length = 50)
     private String lastname;
@@ -31,9 +31,7 @@ public class UserEntity implements Serializable {
     @Column(nullable = false)
     private String encryptedPassword;
 
-    public static Long getSerialversionuid() {
-        return serialVersionUID;
-    }
+   
 
     public Long getId() {
         return id;
@@ -51,12 +49,12 @@ public class UserEntity implements Serializable {
         this.userId = userId;
     }
 
-    public String getFirsname() {
-        return firsname;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirsname(String firsname) {
-        this.firsname = firsname;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getLastname() {

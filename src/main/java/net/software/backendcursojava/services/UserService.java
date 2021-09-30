@@ -16,8 +16,8 @@ public class UserService implements UserServiceinterface{
 
     @Override
     public UserDTO createUser(UserDTO userDTO) {
-        //TODO logica de la creacion del usuario 
-
+        
+        
         UserEntity userEntity = new UserEntity();
         BeanUtils.copyProperties(userDTO, userEntity);
 
