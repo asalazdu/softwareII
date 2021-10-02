@@ -22,7 +22,7 @@ public class UserController {
 
     @GetMapping
     public String getUser(){
-        return "Obterner usuarios";
+        return "Obtener usuarios";
     }
 
     @PostMapping

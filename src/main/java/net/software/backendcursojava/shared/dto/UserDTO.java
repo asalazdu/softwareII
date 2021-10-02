@@ -2,7 +2,7 @@ package net.software.backendcursojava.shared.dto;
 
 import java.io.Serializable;
 
-public class UserDTO implements Serializable {
+public class UserDTO implements Serializable{
 
     private static final Long serialVersionUID = 1L;
 

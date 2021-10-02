@@ -9,7 +9,7 @@ import net.software.backendcursojava.entities.UserEntity;
 import net.software.backendcursojava.shared.dto.UserDTO;
 
 @Service
-public class UserService implements UserServiceinterface{
+public class UserService implements UserServiceinterface {
 
     @Autowired
     UserRepository userRepository;

@@ -7,7 +7,7 @@ public class UserRest {
     private String lastName;
     private String email;
     
-    public String getUserId() {
+    public String getUserid() {
         return userId;
     }
     public void setUserId(String userId) {
