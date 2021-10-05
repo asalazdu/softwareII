@@ -1,5 +1,7 @@
 package net.software.backendcursojava.services;
 
+import java.util.UUID;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,13 +18,19 @@ public class UserService implements UserServiceinterface {
 
     @Override
     public UserDTO createUser(UserDTO userDTO) {
+
+        if(userRepository.findUserByEmail(userDTO.getEmail()) != null)
+            throw new RuntimeException("usuario y axiste");
         
         
         UserEntity userEntity = new UserEntity();
         BeanUtils.copyProperties(userDTO, userEntity);
 
         userEntity.setEncryptedPassword("testpassword");
-        userEntity.setUserId("testUserid");
+
+        UUID userId = UUID.randomUUID();
+        userEntity.setUserId(userId.toString());
+       
 
         UserEntity storedUserDetail = userRepository.save(userEntity);
 

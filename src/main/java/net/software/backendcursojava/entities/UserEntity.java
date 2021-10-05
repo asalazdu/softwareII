@@ -11,6 +11,7 @@ import javax.persistence.Id;
 public class UserEntity implements Serializable {
 
     private static final Long serialVersionUID = 1L;
+    
 
     @Id
     @GeneratedValue
