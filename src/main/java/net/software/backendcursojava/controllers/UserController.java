@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.software.backendcursojava.models.request.UserDetailRequestModel;
 import net.software.backendcursojava.models.responses.UserRest;
-import net.software.backendcursojava.services.UserServiceinterface;
+import net.software.backendcursojava.services.UserServiceInterface;
 import net.software.backendcursojava.shared.dto.UserDTO;
 
 @RestController
@@ -18,7 +18,7 @@ import net.software.backendcursojava.shared.dto.UserDTO;
 public class UserController {
 
     @Autowired
-    UserServiceinterface userService;
+    UserServiceInterface userService;
 
     @GetMapping
     public String getUser(){
